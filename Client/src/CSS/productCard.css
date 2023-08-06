@@ -1,0 +1,27 @@
+.productCard {
+    transition: 0.5s ease;
+    border-radius: 25px;
+    margin: 10px;
+    width: fit-content;
+    padding: 10px;
+    font-family: var(--font-primary);
+    transition: 0.5s ease;
+    position: relative;
+    color: black;
+}
+
+.prodImage {
+    transition: 0.5s ease;
+    border-radius: 15px;
+    width: 300px;
+    height: 300px;
+}
+
+.productCard div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productCard img:hover {
+    transform: scale(1.05);
+}

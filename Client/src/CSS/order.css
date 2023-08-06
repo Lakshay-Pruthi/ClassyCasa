@@ -1,0 +1,14 @@
+#order-outer {
+    height: calc(100vh - 100px);
+    color: black;
+    background-color: var(--primary);
+    margin: 8vh;
+    padding: 16px;
+    border-radius: 20px;
+    font-size: x-large;
+    font-family: var(--font-primary)
+}
+
+#order-outer h1 {
+    color: var(--text-primary);
+}

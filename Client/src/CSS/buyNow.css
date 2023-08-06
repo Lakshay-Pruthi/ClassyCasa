@@ -1,0 +1,24 @@
+#buyNowForm {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: 1s ease;
+    width: 20%;
+}
+
+
+#buyNowForm div {
+    display: flex;
+    width: 500px;
+}
+
+#buyNowForm #address {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+#address input {
+    height: 25px;
+}

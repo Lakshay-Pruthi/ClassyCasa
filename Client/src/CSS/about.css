@@ -1,0 +1,13 @@
+#about {
+    height: calc(100vh - 465px);
+    color: var(--text-primary);
+    background-color: var(--primary);
+    margin: 8vh;
+    padding: 16px;
+    border-radius: 20px;
+    font-size: x-large;
+    font-family: var(--font-primary);
+    overflow-y: scroll;
+    padding: 30px;
+
+}

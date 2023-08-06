@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+@import url('./CSS/about.css');
+@import url('./CSS/banner.css');
+@import url('./CSS/button.css');
+@import url('./CSS/featured.css');
+@import url('./CSS/footer.css');
+@import url('./CSS/navbar.css');
+@import url('./CSS/product.css');
+@import url('./CSS/productCard.css');
+@import url('./CSS/slider.css');
+@import url('./CSS/trending.css');
+@import url('./CSS/orderCard.css');
+@import url('./CSS/order.css');
+@import url('./CSS/signup.css');
+@import url('./CSS/buyNow.css');
+
+:root {
+  --primary: #045b62;
+  --secondary: #02393e;
+  --text-primary: antiquewhite;
+  --font-primary: 'Sofia Sans Condensed', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  all: unset;
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(104, 100, 100, 0.522);
+}
+
+
+a {
+  all: unset;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.heading {
+  padding: 30px;
+  padding-top: 10px;
+  font-family: var(--font-primary);
+  text-align: center;
+}
+
+.productList {
+  transition: 0.5s ease;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center;
+}
+
+.highlight {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-primary);
+  position: relative;
+}
+
+#innerDiv {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow-x: scroll;
+}

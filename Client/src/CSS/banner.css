@@ -1,0 +1,51 @@
+.Banner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: var(--font-primary);
+    background-color: var(--primary);
+    padding: 50px 0px;
+    width: 92vw;
+    border-radius: 50px;
+}
+
+.BannerImage {
+    width: 600px;
+    border: 20px solid white;
+    border-radius: 25px;
+    height: 400px;
+}
+
+
+
+.Banner div p {
+    font-size: xx-large;
+    color: var(--text-primary);
+    padding-bottom: 5px;
+}
+
+.Banner button {
+    all: unset;
+    border: 3px solid white;
+    background-color: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    font-size: xx-large;
+    transition: 0.2s ease;
+    border-radius: 5px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease;
+}
+
+.bannerArrow {
+    transition: 0.5s;
+    margin-right: 10px;
+}
+
+
+.Banner button:hover>.bannerArrow {
+    margin-left: 8px;
+    margin-right: 2px;
+}

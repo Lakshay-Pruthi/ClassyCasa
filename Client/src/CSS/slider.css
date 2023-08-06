@@ -1,0 +1,22 @@
+#slider {
+    transition: 0.5s ease;
+    margin-top: 50px;
+    overflow-x: scroll;
+    display: flex;
+    background-color: antiquewhite;
+    border-radius: 25px;
+}
+
+.imgContainer {
+    min-width: 80vw;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+#slider img {
+
+    min-width: 50vw;
+    height: 50vh;
+    border-radius: 25px;
+}

@@ -1,0 +1,40 @@
+#featured {
+    padding: 20px;
+    width: 92vw;
+    margin-top: 50px;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    overflow-x: scroll;
+}
+
+#featured h1 {
+    margin: 5px;
+    color: var(--text-primary);
+    padding: 5px 20px;
+}
+
+
+#featured div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#featured .productCard {
+    margin: 5px;
+    padding: 5px;
+    border: 5px solid white;
+    background-color: white;
+    width: fit-content;
+}
+
+
+#featured .productCard img:hover {
+    border: none;
+    transform: scale(1.1);
+    border-radius: 5px;
+}

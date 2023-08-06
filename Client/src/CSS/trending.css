@@ -1,0 +1,11 @@
+#Trending {
+    padding: 20px;
+    width: 92vw;
+    margin-top: 50px;
+    background-color: var(--primary);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+}
