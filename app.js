@@ -5,6 +5,7 @@ import router from "./routes/auth.js";
 import cookieParser from "cookie-parser";
 import path from "path";
 import { fileURLToPath } from "url";
+import cors from "cors";
 
 // Dotenv
 import dotenv from "dotenv";
@@ -14,6 +15,7 @@ dotenv.config();
 import { connectToDatabase } from "./db/connectToDatabase.js";
 connectToDatabase();
 
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
