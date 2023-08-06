@@ -17,14 +17,14 @@ dotenv.config();
 import { connectToDatabase } from "./db/connectToDatabase.js";
 connectToDatabase();
 
-app.use(express.static(path.join(__dirname, "./client/dist")));
+app.use(express.static(path.join(__dirname, "./Client/dist")));
 console.log(path.join(__dirname, "./client/dist/index.html"));
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
 
 app.use("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/dist/index.html"));
+  res.sendFile(path.join(__dirname, "./Client/dist/index.html"));
 });
 
 const port = process.env.PORT || 8000;
