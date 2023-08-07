@@ -32,7 +32,6 @@ export const signUpController = async (req, res) => {
   const token = await user.generateAuthToken();
   res.cookie("jwt", token, {
     expires: new Date(Date.now() + 3000000),
-    httpOnly: true,
   });
   user.save().then(() => {
     console.log("Data uploaded successfully");
