@@ -15,7 +15,7 @@ function AllProducts(props) {
             setProd(data.map((e, index) => {
                 index = From + index;
                 const { id, image, name, price } = e;
-                return <Link to={`/ClassyCasa/product/${index}`}><ProductCard Key={index} Index={index} ID={id} imgURL={image} Title={name} Price={price} /></Link>
+                return <Link to={`/product/${index}`}><ProductCard Key={index} Index={index} ID={id} imgURL={image} Title={name} Price={price} /></Link>
             }))
         }
         furnitureData && getProducts();

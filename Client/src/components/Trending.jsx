@@ -14,7 +14,7 @@ function Trending(props) {
             setProd(data.map((e, index) => {
                 index = index + from;
                 const { id, image } = e;
-                return <Link to={`/ClassyCasa/product/${index}`}><ProductCard Key={index} ID={id} imgURL={image} /></Link>
+                return <Link to={`/product/${index}`}><ProductCard Key={index} ID={id} imgURL={image} /></Link>
             }))
         }
         furnitureData && getProducts();

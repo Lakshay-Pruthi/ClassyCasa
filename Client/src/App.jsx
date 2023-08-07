@@ -27,7 +27,7 @@ function App() {
     <BrowserRouter>
       <registrationContext.Provider value={{ loggedIn, setLoggedIn }}>
         <Routes>
-          <Route path='/ClassyCasa' element={<Main />} >
+          <Route path='/' element={<Main />} >
             <Route index element={<Home />} />
             <Route path='About' element={<About />} />
             <Route path='UserOrders' element={<UserOrders />} />
@@ -36,8 +36,8 @@ function App() {
             <Route path='Category/:type' element={<Category />} />
             <Route path='User' element={<User />} />
           </Route>
-          <Route path='/ClassyCasa/Signup' element={<Signup />} />
-          <Route path='/ClassyCasa/Login' element={<Login />} />
+          <Route path='/Signup' element={<Signup />} />
+          <Route path='/Login' element={<Login />} />
 
         </Routes>
       </registrationContext.Provider>

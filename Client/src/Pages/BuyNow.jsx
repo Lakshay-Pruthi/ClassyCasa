@@ -20,7 +20,7 @@ function BuyNow() {
 
         function loadProduct() {
             if (userData == null) {
-                window.location.href = '/ClassyCasa/login'
+                window.location.href = '/login'
             }
             const { name, image, company, price, shipping } = furnitureData[productIndex];
             setTitle(name.toUpperCase());

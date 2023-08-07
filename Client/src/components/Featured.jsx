@@ -15,7 +15,7 @@ function Featured() {
             let Data = furnitureData.slice(0, 4);
             setProd(Data.map((e, index) => {
                 const { id, image } = e;
-                return <Link key={index} to={`/ClassyCasa/product/${index}`}><ProductCard ID={id} imgURL={image} /></Link>
+                return <Link key={index} to={`/product/${index}`}><ProductCard ID={id} imgURL={image} /></Link>
             }))
         }
         furnitureData && getProducts();

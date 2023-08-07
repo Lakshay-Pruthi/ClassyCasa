@@ -16,7 +16,7 @@ function Category() {
             setProd(furnitureData.map((e, index) => {
                 const { id, image, name, price, category } = e;
                 if (category == type.toLowerCase())
-                    return <Link to={`/ClassyCasa/product/${index}`}><ProductCard Index={index} ID={id} imgURL={image} Title={name} Price={price} /></Link>
+                    return <Link to={`/product/${index}`}><ProductCard Index={index} ID={id} imgURL={image} Title={name} Price={price} /></Link>
             }))
         }
         furnitureData && getProducts();

@@ -6,7 +6,7 @@ function Footer() {
         <>
             <footer>
                 <div id="footerAbove">
-                    <Link to={'/ClassyCasa/'}>
+                    <Link to={'/'}>
                         <div className='logoContainer'>
                             <img src={logo} alt="" />
                             <p>ClassyCasa |</p>

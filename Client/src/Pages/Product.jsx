@@ -64,7 +64,7 @@ function Product() {
                         ""
                     }
                     <div className="buttonGroup">
-                        <Link to={`/ClassyCasa/BuyNow/${productIndex}`}><button className="buyBtn">Rent Now</button></Link>
+                        <Link to={`/BuyNow/${productIndex}`}><button className="buyBtn">Rent Now</button></Link>
                         <ToastContainer />
                     </div>
                 </div>

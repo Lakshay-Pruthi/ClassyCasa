@@ -11,7 +11,7 @@ function Orders(props) {
             for (let i = 0; i < length; i++) {
                 setOrderedItems(orderData.map((e) => {
                     const { id, rentalTime, address, createdAt, expectedDelivery } = e;
-                    return <Link to={`/ClassyCasa/product/${id}`}><OrderCard id={id} rentalTime={rentalTime} address={address} createdAt={createdAt} expectedDelivery={expectedDelivery} /></Link>
+                    return <Link to={`/product/${id}`}><OrderCard id={id} rentalTime={rentalTime} address={address} createdAt={createdAt} expectedDelivery={expectedDelivery} /></Link>
                 }))
             }
         }

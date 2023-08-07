@@ -40,7 +40,7 @@ function Login() {
                     onClose: () => {
 
                         setTimeout(() => {
-                            window.location.href = '/ClassyCasa/';
+                            window.location.href = '/';
                         }, 3000);
                     }
                 })
@@ -69,7 +69,7 @@ function Login() {
     return (
         <>
             <div className="userRegistration-outer">
-                <Link to={'/ClassyCasa/'}>
+                <Link to={'/'}>
                     <div className='logoContainer'>
                         <img src={logo} alt="" />
                         <p>ClassyCasa |</p>
@@ -81,7 +81,7 @@ function Login() {
                     <p>email</p><input type="email" required />
                     <p>password</p><input type="password" required minLength={8} />
                     <button id="registerBtn" type="submit">Login</button>
-                    <Link to='/ClassyCasa/Signup'>No Account | Signup</Link>
+                    <Link to='/Signup'>No Account | Signup</Link>
                 </form>
                 <ToastContainer />
             </div>

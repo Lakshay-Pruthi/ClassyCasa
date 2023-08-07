@@ -11,13 +11,13 @@ function Navbar() {
     return (
         <>
             <nav>
-                <Link to={'/ClassyCasa/'}> <div className='logoContainer'>
+                <Link to={'/'}> <div className='logoContainer'>
                     <img src={logo} alt="Logo" id="Logo" />
                     <h4>ClassyCasa</h4>
                 </div>
                 </Link>
                 <ul id="navCatagory">
-                    <NavLink to={'/ClassyCasa/Category/Office'}><li>Office</li></NavLink>
+                    <NavLink to={'Category/Office'}><li>Office</li></NavLink>
                     <NavLink to={'Category/Living Room'}><li>Living Room</li></NavLink>
                     <NavLink to={'Category/Kitchen'}><li>Kitchen</li></NavLink>
                     <NavLink to={'Category/Bedroom'}><li>Bedroom</li></NavLink>

@@ -11,7 +11,7 @@ function UserOrders() {
     useEffect(() => {
         const fetchData = async () => {
             if (userData === null) {
-                window.location.href = '/ClassyCasa/login'
+                window.location.href = '/login'
                 console.log('hello');
             }
             try {
