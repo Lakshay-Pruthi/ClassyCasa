@@ -23,8 +23,8 @@ app.use(router);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./Client/dist/index.html"));
+app.use("/", (req, res) => {
+  res.send("Hello");
 });
 
 const port = process.env.PORT || 8000;
