@@ -71,3 +71,20 @@
     font-size: 40px;
     width: 100%;
 }
+
+#accountBtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+#accountBtn button {
+    background-color: var(--primary);
+    color: var(--text-primary);
+    padding: 5px 10px;
+    border: none;
+    margin: 10px;
+    font-size: larger;
+    width: 200px;
+    border-radius: 50px;
+    transition: 0.5s ease;
+}

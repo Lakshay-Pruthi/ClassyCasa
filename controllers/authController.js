@@ -36,7 +36,7 @@ export const signUpController = async (req, res) => {
   const token = await user.generateAuthToken();
   console.log(token);
   res.cookie("jwt", token, {
-    expires: new Date(Date.now() + 3000000),
+    expires: new Date(Date.now() + 300000000000),
     httpOnly: true,
   });
 
@@ -51,7 +51,7 @@ export const logInController = async (req, res) => {
   if (user && val) {
     const token = await user.generateAuthToken();
     res.cookie("jwt", token, {
-      expires: new Date(Date.now() + 3000000),
+      expires: new Date(Date.now() + 3000000000),
     });
 
     res.send({ message: "Login Successfull" });
@@ -79,7 +79,7 @@ export const updateUserDetailController = async (req, res) => {
     );
     const token = await user.generateAuthToken();
     res.cookie("jwt", token, {
-      expires: new Date(Date.now() + 3000000),
+      expires: new Date(Date.now() + 3000000000),
     });
     res.send({ message: "Account updated successfully" });
   } else {

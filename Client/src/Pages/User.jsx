@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { MainContext } from "./Main";
 import { ToastContainer, toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 function User() {
     const { userData } = useContext(MainContext);
@@ -58,9 +59,19 @@ function User() {
         }
         setEditAccess(!editAccess);
     }
+
+    async function logout() {
+
+        window.location.href = '/login'
+
+    }
     return (
         <>
+            <div id="accountBtn">
+                <button onClick={logout}>Logout</button>
+            </div>
             <div className="userRegistration-outer">
+
                 <form id="userRegistration" >
                     <h1>Your Account</h1>
                     <p>name</p><input type="text" value={Name} readOnly={!editAccess} onChange={(e) => setName(e.target.value)} />
