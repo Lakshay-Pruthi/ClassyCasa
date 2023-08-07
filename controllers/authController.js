@@ -29,11 +29,23 @@ export const signUpController = async (req, res) => {
 
   const hash = await bcrypt.hash(password, 10);
   const user = new User({ name, email, password: hash, phone, address });
-  const token = await user.generateAuthToken();
-  res.cookie("jwt", token, {
-    expires: new Date(Date.now() + 3000000),
-  });
-  user.save().then(() => {
+
+  user.save().then(async () => {
+    try {
+      const res = await fetch("/api/login", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+
     console.log("Data uploaded successfully");
   });
   res.send(user);
