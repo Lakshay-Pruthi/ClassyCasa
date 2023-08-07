@@ -71,8 +71,14 @@ function BuyNow() {
                 const Data = await res.json();
                 toast.success(Data.message,
                     {
-                        autoClose: 5000,
-                        position: toast.POSITION.BOTTOM_RIGHT
+                        autoClose: 1500,
+                        position: toast.POSITION.BOTTOM_RIGHT,
+                        onClose: () => {
+                            setTimeout(() => {
+                                window.location.href = '/UserOrders'
+                            }, 1500);
+
+                        }
                     })
 
             } else {

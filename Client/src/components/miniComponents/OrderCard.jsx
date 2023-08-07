@@ -8,7 +8,7 @@ function OrderCard(props) {
     const { name, image, price } = furnitureData[id];
     return (
         <>
-            <Link to={`/ClassyCasa/product/${id}`} >
+            <Link to={`/product/${id}`} >
                 <div className="orderCard">
                     <img src={image} alt="" />
                     <div>
