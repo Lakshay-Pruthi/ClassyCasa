@@ -3,12 +3,13 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { createContext, useState, useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
+import productData from '../data.json'
 
 export const MainContext = createContext();
 
 
 function Main() {
-    const [furnitureData, setFurnitureData] = useState(null);
+    const [furnitureData, setFurnitureData] = useState(productData);
     const [loggedIn, setLoggedIn] = useState(false);
     const [userData, setUserData] = useState(null);
 
@@ -41,14 +42,7 @@ function Main() {
     }, [])
 
 
-    useEffect(() => {
-        async function fetchData() {
-            const response = await fetch('https://course-api.com/react-store-products');
-            const productsData = await response.json();
-            setFurnitureData(productsData);
-        }
-        fetchData();
-    }, [])
+
 
 
     return (

@@ -14,6 +14,7 @@ function Login() {
 
     async function loginUser(e) {
         e.preventDefault();
+        console.log(e);
         const email = e.target[0].value;
         const password = e.target[1].value;
 
@@ -78,8 +79,8 @@ function Login() {
                 </Link>
                 <form id="userRegistration" onSubmit={loginUser}>
                     <h1>Login</h1>
-                    <p>email</p><input type="email" required />
-                    <p>password</p><input type="password" required minLength={8} />
+                    <p>email</p><input name="emailInput" type="email" required />
+                    <p>password</p><input name="passwordInput" type="password" required minLength={8} />
                     <button id="registerBtn" type="submit">Login</button>
                     <Link to='/Signup'>No Account | Signup</Link>
                 </form>
