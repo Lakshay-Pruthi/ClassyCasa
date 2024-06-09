@@ -26,10 +26,10 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(router);
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
-app.use(express.static(path.join(__dirname, "/Client/dist")));
+// app.use(express.static(path.join(__dirname, "/Client/dist")));
 
 app.use("/", (req, res) => {
   // res.sendFile(path.join(__dirname, "/Client/dist/index.html"));
