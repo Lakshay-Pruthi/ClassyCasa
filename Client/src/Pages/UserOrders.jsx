@@ -1,17 +1,18 @@
 import { useContext, useEffect, useState } from "react";
 import Orders from "./Orders";
 import { MainContext } from "./Main";
+import { useNavigate } from "react-router-dom";
 
 
 function UserOrders() {
-
+    const navigate = useNavigate();
     const [orderData, setOrderData] = useState([]);
     const { userData } = useContext(MainContext);
 
     useEffect(() => {
         const fetchData = async () => {
             if (userData === null) {
-                window.location.href = '/login'
+                navigate('/login')
                 console.log('hello');
             }
             try {

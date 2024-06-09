@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { MainContext } from "./Main";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 
 function BuyNow() {
@@ -14,13 +14,13 @@ function BuyNow() {
     const [Shipping, setShipping] = useState('Loading...')
 
     const [checked, setChecked] = useState(true)
-
+    const navigate = useNavigate();
 
     useEffect(() => {
 
         function loadProduct() {
             if (userData == null) {
-                window.location.href = '/login'
+                navigate('/login')
             }
             const { name, image, company, price, shipping } = furnitureData[productIndex];
             setTitle(name.toUpperCase());
