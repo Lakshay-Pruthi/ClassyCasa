@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from '../assets/Navbar/logo.png'
 import Footer from "../components/Footer";
 import { registrationContext } from "../App";
@@ -10,6 +10,8 @@ function Signup() {
     const { loggedin, setLoggedIn } = useContext(registrationContext);
 
     const [orderData, setOrderData] = useState()
+
+    const navigate = useNavigate();
 
     async function registerUser(e) {
         e.preventDefault();
@@ -45,7 +47,7 @@ function Signup() {
                     onClose: () => {
 
                         setTimeout(() => {
-                            window.location.href = '/';
+                            navigate('/');
                         }, 1000);
                     }
                 })
