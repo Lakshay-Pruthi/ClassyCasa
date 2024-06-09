@@ -15,7 +15,13 @@ dotenv.config();
 import { connectToDatabase } from "./db/connectToDatabase.js";
 connectToDatabase();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://classycasa.vercel.app"],
+    methods: ["POST", "GET", "PUT"],
+    credentials: true,
+  })
+);
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
