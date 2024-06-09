@@ -32,7 +32,8 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, "/Client/dist")));
 
 app.use("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/Client/dist/index.html"));
+  // res.sendFile(path.join(__dirname, "/Client/dist/index.html"));
+  res.send("Hello");
 });
 
 const port = process.env.PORT || 8000;
