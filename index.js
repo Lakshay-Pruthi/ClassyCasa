@@ -17,7 +17,7 @@ connectToDatabase();
 
 app.use(
   cors({
-    origin: ["https://classycasa.vercel.app"],
+    origin: ["https://classy-casa.vercel.app"],
     methods: ["POST", "GET", "PUT"],
     credentials: true,
   })
