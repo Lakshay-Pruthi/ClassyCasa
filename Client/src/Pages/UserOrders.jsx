@@ -11,32 +11,29 @@ function UserOrders() {
 
     useEffect(() => {
         const fetchData = async () => {
-            if (userData === null) {
-                navigate('/login')
-                console.log('hello');
-            }
-            try {
-                const { email } = userData;
+            if (userData) {
 
-                const res = await fetch('/api/getOrders', {
-                    method: 'POST',
-                    headers: {
-                        "Content-type": 'application/json'
-                    },
-                    body: JSON.stringify({
-                        "email": email
-                    })
-                });
-                if (res.ok) {
-                    const data = await res.json();
-                    setOrderData(data);
-                    console.log(data);
+                try {
+                    const { email } = userData;
+                    const res = await fetch('/api/getOrders', {
+                        method: 'POST',
+                        headers: {
+                            "Content-type": 'application/json'
+                        },
+                        body: JSON.stringify({
+                            "email": email
+                        })
+                    });
+                    if (res.ok) {
+                        const data = await res.json();
+                        setOrderData(data);
 
-                } else {
-                    console.error('Request failed with status:', res.status);
+                    } else {
+                        console.error('Request failed with status:', res.status);
+                    }
+                } catch (error) {
+                    console.error('Error fetching data:', error);
                 }
-            } catch (error) {
-                console.error('Error fetching data:', error);
             }
         };
 

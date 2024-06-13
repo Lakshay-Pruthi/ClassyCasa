@@ -7,7 +7,7 @@ export default defineConfig({
 
   server: {
     proxy: {
-      "/api/": "https://classy-casa.vercel.app/",
+      "/api/": "https://localhost:5000/",
     },
   },
 });

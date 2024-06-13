@@ -125,7 +125,7 @@ function BuyNow() {
                         <input type="checkbox" id="useDefaultAddress" onChange={() => setChecked(!checked)} />
                         <label htmlFor="useDefaultAddress">use default name and details</label>
                     </div>
-                    {checked ?
+                    {checked &&
                         <div id="address">
                             <label htmlFor="">name</label>
                             <input type="text" required />
@@ -138,7 +138,7 @@ function BuyNow() {
                             <label htmlFor="">zip code</label>
                             <input type="number" required />
                         </div>
-                        : ""}
+                    }
                     <div className="buttonGroup">
                         <button className="buyBtn" type="button">Cancel</button>
                         <button className="buyBtn" type="submit">Submit</button>

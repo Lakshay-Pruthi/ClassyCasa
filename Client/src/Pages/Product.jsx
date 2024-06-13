@@ -58,10 +58,8 @@ function Product() {
                         <h2>Price: ${Price / 1000}/month</h2>
                         <h3>Brand: {Brand}</h3>
                     </div>
-                    {Shipping ?
+                    {Shipping &&
                         <p>This product is eligible for free shipping.</p>
-                        :
-                        ""
                     }
                     <div className="buttonGroup">
                         <Link to={`/BuyNow/${productIndex}`}><button className="buyBtn">Rent Now</button></Link>
