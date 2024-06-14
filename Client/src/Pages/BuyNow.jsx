@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { MainContext } from "./Main";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 function BuyNow() {
     const { productIndex } = useParams()
@@ -74,10 +75,7 @@ function BuyNow() {
                         autoClose: 1500,
                         position: toast.POSITION.BOTTOM_RIGHT,
                         onClose: () => {
-                            setTimeout(() => {
-                                window.location.href = '/UserOrders'
-                            }, 1500);
-
+                            navigate('/UserOrders')
                         }
                     })
 
@@ -140,7 +138,7 @@ function BuyNow() {
                         </div>
                     }
                     <div className="buttonGroup">
-                        <button className="buyBtn" type="button">Cancel</button>
+                        <Link to={`/product/${productIndex}`}><button className="buyBtn" type="button">Cancel</button> </Link>
                         <button className="buyBtn" type="submit">Submit</button>
                     </div>
                 </form>
