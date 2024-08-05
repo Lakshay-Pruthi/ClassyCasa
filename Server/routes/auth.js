@@ -5,7 +5,6 @@ import {
   updateUserDetailController,
   logoutUserController,
   forgotPasswordController,
-  OTPVerificationController,
 } from "../controllers/authController.js";
 
 import express from "express";
