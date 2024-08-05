@@ -18,7 +18,7 @@ router.get("/api/authenticate", authenticateController);
 router.post("/api/signup", signUpController);
 router.post("/api/login", logInController);
 router.put("/api/updateUserDetails", updateUserDetailController);
-router.post("/api/forgotPassword/:sessionId", OTPVerificationController);
+// router.post("/api/forgotPassword/:sessionId", OTPVerificationController);
 router.post("/api/forgotPassword", forgotPasswordController);
 router.delete("/api/logout", logoutUserController);
 
