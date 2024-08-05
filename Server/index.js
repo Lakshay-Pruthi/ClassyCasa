@@ -9,7 +9,7 @@ import cors from "cors";
 import rootDir from "./utils/path.js";
 import session from "express-session";
 import connectMongoDBSession from "connect-mongodb-session";
-const mongoDBStore = connectMongoDBSession(session);
+// const mongoDBStore = connectMongoDBSession(session);
 
 // Dotenv
 import dotenv from "dotenv";
@@ -18,10 +18,11 @@ dotenv.config();
 // Database
 import { connectToDatabase } from "./utils/connectToDatabase.js";
 connectToDatabase();
-const store = new mongoDBStore({
-  uri: process.env.MONGO,
-  collection: "sessions",
-});
+
+// const store = new mongoDBStore({
+//   uri: process.env.MONGO,
+//   collection: "sessions",
+// });
 
 app.use(cors());
 app.use(cookieParser());
