@@ -179,7 +179,6 @@ export const updateUserDetailController = async (req, res) => {
 };
 
 export const logoutUserController = async (req, res) => {
-  req.session.destroy(() => {});
   res.clearCookie("jwt");
   res.end();
 };
@@ -198,7 +197,6 @@ export const forgotPasswordController = async (req, res) => {
     };
     try {
       sendMail(info).then((result) => {
-        req.session.OTP = OTP;
         res.status(200).json({ message: "OTP sent successfully" });
       });
     } catch (err) {
@@ -210,13 +208,12 @@ export const forgotPasswordController = async (req, res) => {
   }
 };
 
-export const OTPVerificationController = async (req, res) => {
-  let OTP = req.session.OTP;
-  if (OTP == req.OTP) {
-    res.status(200).json({ message: "OTP Verified" });
-  } else {
-    res.redirect("/");
-  }
-};
+// export const OTPVerificationController = async (req, res) => {
+//   if (OTP == req.OTP) {
+//     res.status(200).json({ message: "OTP Verified" });
+//   } else {
+//     res.redirect("/");
+//   }
+// };
 
 export default logInController;

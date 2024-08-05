@@ -27,14 +27,14 @@ connectToDatabase();
 app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
-app.use(
-  session({
-    secret: process.env.SESSION_KEY,
-    resave: false,
-    saveUninitialized: false,
-    store: store,
-  })
-);
+// app.use(
+//   session({
+//     secret: process.env.SESSION_KEY,
+//     resave: false,
+//     saveUninitialized: false,
+//     store: store,
+//   })
+// );
 app.use(authenticationRoutes);
 app.use(orderRoutes);
 
