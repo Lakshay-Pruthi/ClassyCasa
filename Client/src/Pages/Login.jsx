@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import logo from '../assets/Navbar/logo.png'
 import Footer from "../components/Footer";
@@ -9,6 +9,7 @@ import { registrationContext } from "../App";
 function Login() {
 
     const { loggedIn, setLoggedIn } = useContext(registrationContext);
+    const navigate = useNavigate();
 
 
 
@@ -39,10 +40,7 @@ function Login() {
                     autoClose: 1500,
                     position: toast.POSITION.BOTTOM_RIGHT,
                     onClose: () => {
-
-                        setTimeout(() => {
-                            window.location.href = '/';
-                        }, 1500);
+                        navigate('/')
                     }
                 })
 
@@ -50,7 +48,7 @@ function Login() {
                 const errorMsg = await res.json();
                 toast.error(errorMsg.error,
                     {
-                        autoClose: 5000,
+                        autoClose: 3000,
                         position: toast.POSITION.BOTTOM_RIGHT,
                     })
                 console.error('Request failed with status:', res.status);
@@ -79,10 +77,13 @@ function Login() {
                 </Link>
                 <form id="userRegistration" onSubmit={loginUser}>
                     <h1>Login</h1>
-                    <p>email</p><input name="emailInput" type="email" required />
-                    <p>password</p><input name="passwordInput" type="password" required minLength={8} />
+                    <label>email</label><input name="emailInput" type="email" required />
+                    <label>password</label><input name="passwordInput" type="password" required minLength={8} />
                     <button id="registerBtn" type="submit">Login</button>
-                    <Link to='/Signup'>No Account | Signup</Link>
+                    <div id="loginFormLinks">
+                        <Link to='/Signup'>No Account | Signup</Link>
+                        <Link to='/ForgotPassword'>Forgot Password</Link>
+                    </div>
                 </form>
                 <ToastContainer />
             </div>

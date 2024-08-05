@@ -8,7 +8,9 @@ class Order {
     this.status = status;
     this.createdAt = `${date.getDate()} - ${date.getMonth()} - ${date.getFullYear()}`;
     this.updatedAt = this.createdAt;
-    this.expectedDelivery = `${date.getDate() + 3} - ${date.getMonth()} - ${date.getFullYear()}`;
+    this.expectedDelivery = `${
+      date.getDate() + 3
+    } - ${date.getMonth()} - ${date.getFullYear()}`;
   }
 }
 

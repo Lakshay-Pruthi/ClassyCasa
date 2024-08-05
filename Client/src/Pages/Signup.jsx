@@ -8,19 +8,18 @@ import { registrationContext } from "../App";
 function Signup() {
 
     const { loggedin, setLoggedIn } = useContext(registrationContext);
-
     const [orderData, setOrderData] = useState()
+
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    const [phone, setPhone] = useState();
+    const [address, setAddress] = useState();
 
     const navigate = useNavigate();
 
     async function registerUser(e) {
         e.preventDefault();
-        const name = e.target[0].value;
-        const email = e.target[1].value;
-        const password = e.target[2].value;
-        const phone = e.target[3].value;
-        const address = e.target[4].value;
-
         try {
             const res = await fetch('/api/signup', {
                 method: 'POST',
@@ -89,11 +88,11 @@ function Signup() {
                 </Link>
                 <form id="userRegistration" onSubmit={registerUser}>
                     <h1>Signup</h1>
-                    <p>name</p><input type="text" required />
-                    <p>email</p><input type="email" required />
-                    <p>password</p><input type="password" required minLength={8} />
-                    <p>phone</p><input type="phone" required />
-                    <p>address</p><input type="text" required />
+                    <label>name</label><input type="text" name="name" onChange={(e) => setName(e.target.value)} required />
+                    <label>email</label><input type="email" name="email" onChange={(e) => setEmail(e.target.value)} required />
+                    <label>password</label><input type="password" name="password" onChange={(e) => setPassword(e.target.value)} required minLength={8} />
+                    <label>phone</label><input type="phone" name="phone" onChange={(e) => setPhone(e.target.value)} required />
+                    <label>address</label><input type="text" name="address" onChange={(e) => setAddress(e.target.value)} required />
                     <button id="registerBtn" type="submit">Register</button>
                     <Link to={'/Login'}>Already have an account | Login</Link>
                 </form>

@@ -23,9 +23,10 @@ function Main() {
                 });
                 if (res.ok) {
                     const data = await res.json();
-                    setLoggedIn(true);
                     setUserData(data)
-                    console.log(data);
+                    setLoggedIn(true)
+
+
                 } else {
                     const errorMsg = await res.json();
                 }

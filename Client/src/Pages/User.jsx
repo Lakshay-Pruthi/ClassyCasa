@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { MainContext } from "./Main";
 import { ToastContainer, toast } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function User() {
     const { userData } = useContext(MainContext);
+    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -61,8 +62,17 @@ function User() {
     }
 
     async function logout() {
+        const res = await fetch('/api/logout', {
+            method: 'DELETE'
+        })
 
-        window.location.href = '/login'
+        if (res.ok) {
+            navigate('/login')
+        }
+
+
+        // implement logout functionality
+        // add route in the server and delete the jwt token
 
     }
     return (

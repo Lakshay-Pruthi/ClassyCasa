@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import arrow from './miniComponents/assets/BannerArrow.png'
 function Banner(props) {
-    const { Title, Image, URL } = props;
+    const { Title, Image } = props;
     return (
         <>
             <div className='highlight'>

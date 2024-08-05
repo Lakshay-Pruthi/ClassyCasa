@@ -8,12 +8,12 @@ function Category() {
 
     const { type } = useParams();
     const { furnitureData } = useContext(MainContext)
-    const [prod, setProd] = useState(null);
+    const [productList, setProductList] = useState(null);
 
 
     useEffect(() => {
         function getProducts() {
-            setProd(furnitureData.map((e, index) => {
+            setProductList(furnitureData.map((e, index) => {
                 const { id, image, name, price, category } = e;
                 if (category == type.toLowerCase())
                     return <Link to={`/product/${index}`}><ProductCard Index={index} ID={id} imgURL={image} Title={name} Price={price} /></Link>
@@ -27,7 +27,7 @@ function Category() {
         <>
             <h1 className='heading'>{type}</h1>
             <div className='productList'>
-                {prod}
+                {productList}
             </div>
         </>
     )

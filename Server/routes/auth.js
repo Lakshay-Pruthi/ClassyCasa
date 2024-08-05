@@ -2,22 +2,24 @@ import {
   authenticateController,
   signUpController,
   logInController,
-  orderController,
-  getOrdersController,
   updateUserDetailController,
+  logoutUserController,
+  forgotPasswordController,
+  OTPVerificationController,
 } from "../controllers/authController.js";
 
 import express from "express";
 const router = express.Router();
+
+import { check, body } from "express-validator";
 
 router.get("/api/authenticate", authenticateController);
 
 router.post("/api/signup", signUpController);
 router.post("/api/login", logInController);
 router.put("/api/updateUserDetails", updateUserDetailController);
-
-router.put("/api/order", orderController);
-
-router.post("/api/getOrders", getOrdersController);
+router.post("/api/forgotPassword/:sessionId", OTPVerificationController);
+router.post("/api/forgotPassword", forgotPasswordController);
+router.delete("/api/logout", logoutUserController);
 
 export default router;

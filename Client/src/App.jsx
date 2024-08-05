@@ -12,6 +12,8 @@ import Login from './Pages/Login'
 import { createContext, useEffect, useState } from 'react'
 import BuyNow from './Pages/BuyNow'
 import User from './Pages/User'
+import ForgotPassword from './Pages/ForgotPassword'
+import Error404 from './Pages/Error404'
 
 
 export const registrationContext = createContext();
@@ -35,9 +37,11 @@ function App() {
             <Route path='BuyNow/:productIndex' element={<BuyNow />} />
             <Route path='Category/:type' element={<Category />} />
             <Route path='User' element={<User />} />
+            <Route path='*' element={<Error404 />} />
           </Route>
           <Route path='/Signup' element={<Signup />} />
           <Route path='/Login' element={<Login />} />
+          <Route path='/ForgotPassword' element={<ForgotPassword />} />
 
         </Routes>
       </registrationContext.Provider>

@@ -40,10 +40,9 @@
 }
 
 #userRegistration a {
-    width: 100%;
     text-align: center;
-    padding-top: 10px;
     text-decoration: underline;
+    padding-top: 15px;
 }
 
 .userRegistration-outer {
@@ -87,4 +86,11 @@
     width: 200px;
     border-radius: 50px;
     transition: 0.5s ease;
+}
+
+#loginFormLinks {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    padding-bottom: 0px;
 }
