@@ -94,3 +94,7 @@
     padding: 10px;
     padding-bottom: 0px;
 }
+
+#loginFormLinks a {
+    padding-right: 10px;
+}
