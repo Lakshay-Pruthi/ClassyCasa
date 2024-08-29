@@ -4,11 +4,9 @@ import Trending from "../components/Trending";
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { MainContext } from "./Main";
-import { registrationContext } from "../App";
 
 
 function Product() {
-    const { loggedIn, setLoggedIn } = useContext(registrationContext);
     const { productIndex } = useParams();
     const { furnitureData } = useContext(MainContext)
 
@@ -17,27 +15,31 @@ function Product() {
         window.scrollTo(0, 0);
     }, [productIndex]);
 
-    const [imgURL, setImageURL] = useState(null);
-    const [Title, setTitle] = useState('Loading...')
-    const [Price, setPrice] = useState('Loading...')
-    const [Description, setDescription] = useState('Loading...')
-    const [Brand, setBrand] = useState('Loading...')
-    const [Shipping, setShipping] = useState('Loading...')
+
+
+    const [product, setProduct] = useState({
+        title: null,
+        imageURL: null,
+        price: null,
+        description: null,
+        brand: null,
+        shipping: null
+    })
 
 
 
     useEffect(() => {
-
         function loadProduct() {
             const { name, image, company, price, shipping, description } = furnitureData[productIndex];
-            setTitle(name.toUpperCase());
-            setImageURL(image);
-            setPrice(price)
-            setBrand(company)
-            setShipping(shipping)
-            setDescription(description)
+            setProduct({
+                title: name,
+                imageURL: image,
+                price: price,
+                description: description,
+                brand: company,
+                shipping: shipping
+            })
         }
-
         furnitureData && loadProduct();
     }, [furnitureData, productIndex])
 
@@ -49,20 +51,20 @@ function Product() {
         <>
             <div className="productContainer" id="prod">
                 <div className="prodFullImage">
-                    <img src={imgURL} alt="Loading..." />
+                    <img src={product.imageURL} alt="Loading..." />
                 </div>
                 <div className="prodDetails">
-                    <h1 className="heading">{Title}</h1>
-                    <p>{Description}</p>
+                    <h1 className="heading">{product.title}</h1>
+                    <p>{product.description}</p>
                     <div>
-                        <h2>Price: ${Price / 1000}/month</h2>
-                        <h3>Brand: {Brand}</h3>
+                        <h2>Price: ${product.price}/month</h2>
+                        <h3>Brand: {product.brand}</h3>
                     </div>
-                    {Shipping &&
+                    {product.shipping &&
                         <p>This product is eligible for free shipping.</p>
                     }
                     <div className="buttonGroup">
-                        <Link to={`/BuyNow/${productIndex}`}><button className="buyBtn">Rent Now</button></Link>
+                        <Link to={`/checkout/${productIndex}`}><button className="buyBtn">Rent Now</button></Link>
                         <ToastContainer />
                     </div>
                 </div>

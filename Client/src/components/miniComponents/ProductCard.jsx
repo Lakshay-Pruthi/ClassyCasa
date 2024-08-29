@@ -12,7 +12,7 @@ function ProductCard(props) {
             {Title && Price &&
                 <div>
                     <h2>{Title.toUpperCase()}</h2>
-                    <p>${Price}</p>
+                    <p>${parseInt(Price)}</p>
                 </div>
             }
         </div>

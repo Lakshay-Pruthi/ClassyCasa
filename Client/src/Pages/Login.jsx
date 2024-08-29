@@ -81,8 +81,8 @@ function Login() {
                     <label>password</label><input name="passwordInput" type="password" required minLength={8} />
                     <button id="registerBtn" type="submit">Login</button>
                     <div id="loginFormLinks">
-                        <Link to='/Signup'>No Account | Signup</Link>
-                        <Link to='/ForgotPassword'>Forgot Password</Link>
+                        <Link to='/signup'>No Account | Signup</Link>
+                        {/* <Link to='/forgotPassword'>Forgot Password</Link> */}
                     </div>
                 </form>
                 <ToastContainer />

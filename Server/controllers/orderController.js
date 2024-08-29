@@ -1,14 +1,49 @@
 import Order from "../models/orderSchema.js";
 import User from "../models/userSchema.js";
+import Stripe from "stripe";
+const stripe = new Stripe(process.env.STRIPE_KEY);
 
-export const orderController = async (req, res) => {
-  const { id, email, rentalTime, address, status } = req.body;
-  const newOrder = new Order({
-    id: id,
-    rentalTime: rentalTime,
-    address: address,
-    status: status,
+export const couponController = async (req, res) => {
+  const { id, couponCode } = req.body;
+
+  if (couponCode == "HAPPYRENT") {
+    res.status(200).json({ discount: 10 });
+  } else {
+    res.status(422).json({ message: "This Coupon code doesn't exist" });
+  }
+};
+
+export const checkoutController = async (req, res) => {
+  const { product, rentalTime, total } = req.body;
+
+  let sessionID = await stripe.checkout.sessions.create({
+    payment_method_types: ["card"],
+    line_items: [
+      {
+        price_data: {
+          currency: "usd",
+          product_data: {
+            name: product.title,
+            description: `Rental time: ${rentalTime} month`,
+          },
+          unit_amount: total * 100,
+        },
+        quantity: 1,
+      },
+    ],
+    mode: "payment",
+    success_url: req.protocol + "://" + req.get("host") + "/UserOrders",
+    cancel_url:
+      req.protocol +
+      "://" +
+      req.get("host") +
+      `/product/${product.productIndex}`,
   });
+
+  res.status(200).json({ sessionID: sessionID.id });
+};
+
+export const postCheckoutController = async (req, res) => {
   const user = await User.findOne({ email: email });
   if (user) {
     const allOrders = user.orders;
@@ -43,4 +78,4 @@ export const getOrdersController = async (req, res) => {
   }
 };
 
-export default orderController;
+export default checkoutController;

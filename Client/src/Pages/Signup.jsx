@@ -94,7 +94,7 @@ function Signup() {
                     <label>phone</label><input type="phone" name="phone" onChange={(e) => setPhone(e.target.value)} required />
                     <label>address</label><input type="text" name="address" onChange={(e) => setAddress(e.target.value)} required />
                     <button id="registerBtn" type="submit">Register</button>
-                    <Link to={'/Login'}>Already have an account | Login</Link>
+                    <Link to={'/login'}>Already have an account | Login</Link>
                 </form>
                 <ToastContainer />
             </div>

@@ -16,7 +16,6 @@ function Main() {
 
     useEffect(() => {
         async function loginUser() {
-
             try {
                 const res = await fetch('/api/authenticate', {
                     method: 'GET',

@@ -25,6 +25,7 @@
 * {
   margin: 0;
   padding: 0;
+
 }
 
 ::-webkit-scrollbar {
@@ -71,4 +72,11 @@ a {
   align-items: center;
   width: 100%;
   overflow-x: scroll;
+}
+
+.main-container {
+  min-height: 70vh;
+  padding: 40px;
+  font-family: var(--font-primary);
+
 }

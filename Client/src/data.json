@@ -2,7 +2,7 @@
     {
       "id": "recZkNf2kwmdBcqd0",
       "name": "accent chair",
-      "price": 25999,
+      "price": 259,
       "image": "https://www.course-api.com/images/store/product-1.jpeg",
       "colors": [
         "#ff0000",
@@ -17,7 +17,7 @@
     {
       "id": "recEHmzvupvT8ZONH",
       "name": "albany sectional",
-      "price": 109999,
+      "price": 109,
       "image": "https://www.course-api.com/images/store/product-2.jpeg",
       "colors": [
         "#000",
@@ -30,7 +30,7 @@
     {
       "id": "rec5NBwZ5zCD9nfF0",
       "name": "albany table",
-      "price": 309999,
+      "price": 300,
       "image": "https://www.course-api.com/images/store/product-3.jpeg",
       "colors": [
         "#ffb900",
@@ -43,7 +43,7 @@
     {
       "id": "recd1jIVIEChmiwhe",
       "name": "armchair",
-      "price": 12599,
+      "price": 125,
       "image": "https://www.course-api.com/images/store/product-4.jpeg",
       "colors": [
         "#000",
@@ -58,7 +58,7 @@
     {
       "id": "recotY5Nh00DQFdkm",
       "name": "dining table",
-      "price": 42999,
+      "price": 420,
       "image": "https://www.course-api.com/images/store/product-5.jpeg",
       "colors": [
         "#00ff00",
@@ -73,7 +73,7 @@
     {
       "id": "rec1Ntk7siEEW9ha1",
       "name": "emperor bed",
-      "price": 23999,
+      "price": 280,
       "image": "https://www.course-api.com/images/store/product-6.jpeg",
       "colors": [
         "#0000ff",
@@ -87,7 +87,7 @@
     {
       "id": "recNZ0koOqEmilmoz",
       "name": "entertainment center",
-      "price": 59999,
+      "price": 45,
       "image": "https://www.course-api.com/images/store/product-7.jpeg",
       "featured": true,
       "colors": [
@@ -102,7 +102,7 @@
     {
       "id": "recrfxv3EwpvJwvjq",
       "name": "high-back bench",
-      "price": 39999,
+      "price": 95,
       "image": "https://www.course-api.com/images/store/product-8.jpeg",
       "featured": true,
       "colors": [
@@ -117,7 +117,7 @@
     {
       "id": "recoW8ecgjtKx2Sj2",
       "name": "leather chair",
-      "price": 20099,
+      "price": 25,
       "image": "https://www.course-api.com/images/store/product-9.jpeg",
       "colors": [
         "#ff0000",
@@ -131,7 +131,7 @@
     {
       "id": "recEOA6qtDag1hRbU",
       "name": "leather sofa",
-      "price": 99999,
+      "price": 90,
       "image": "https://www.course-api.com/images/store/product-10.jpeg",
       "colors": [
         "#00ff00",
@@ -144,7 +144,7 @@
     {
       "id": "recoAJYUCuEKxcPSr",
       "name": "modern bookshelf",
-      "price": 31999,
+      "price": 30,
       "image": "https://www.course-api.com/images/store/product-11.jpeg",
       "featured": true,
       "colors": [
@@ -159,7 +159,7 @@
     {
       "id": "recQ0fMd8T0Vk211E",
       "name": "modern poster",
-      "price": 3099,
+      "price": 74,
       "image": "https://www.course-api.com/images/store/product-12.jpeg",
       "colors": [
         "#000"
@@ -172,7 +172,7 @@
     {
       "id": "rec7CjDWKRgNQtrKe",
       "name": "shelf",
-      "price": 30999,
+      "price": 85,
       "image": "https://www.course-api.com/images/store/product-13.jpeg",
       "colors": [
         "#00ff00"
@@ -184,7 +184,7 @@
     {
       "id": "recF0KpwlkF7e8kXO",
       "name": "simple chair",
-      "price": 109999,
+      "price": 105,
       "image": "https://www.course-api.com/images/store/product-14.jpeg",
       "colors": [
         "#0000ff"
@@ -197,7 +197,7 @@
     {
       "id": "recs5BSVU3qQrOj4E",
       "name": "sofa set",
-      "price": 129999,
+      "price": 125,
       "image": "https://www.course-api.com/images/store/product-15.jpeg",
       "colors": [
         "#00ff00",
@@ -211,7 +211,7 @@
     {
       "id": "recroK1VD8qVdMP5H",
       "name": "suede armchair",
-      "price": 15999,
+      "price": 155,
       "image": "https://www.course-api.com/images/store/product-16.jpeg",
       "colors": [
         "#ffb900"
@@ -223,7 +223,7 @@
     {
       "id": "rec7JInsuCEHgmaGe",
       "name": "utopia sofa",
-      "price": 79999,
+      "price": 37,
       "image": "https://www.course-api.com/images/store/product-17.jpeg",
       "featured": true,
       "colors": [
@@ -237,7 +237,7 @@
     {
       "id": "rec3jeKnhInKHJuz2",
       "name": "vase table",
-      "price": 120999,
+      "price": 120,
       "image": "https://www.course-api.com/images/store/product-18.jpeg",
       "featured": true,
       "colors": [
@@ -250,7 +250,7 @@
     {
       "id": "recv2ohxljlK2FZO7",
       "name": "wooden bed",
-      "price": 250099,
+      "price": 250,
       "image": "https://www.course-api.com/images/store/product-19.jpeg",
       "colors": [
         "#000",
@@ -263,7 +263,7 @@
     {
       "id": "recJIjREF3dlFi3sR",
       "name": "wooden desk",
-      "price": 150999,
+      "price": 150,
       "image": "https://www.course-api.com/images/store/product-20.jpeg",
       "colors": [
         "#000"
@@ -276,7 +276,7 @@
     {
       "id": "recm7wC8TBVdU9oEL",
       "name": "wooden desk",
-      "price": 40099,
+      "price": 400,
       "image": "https://www.course-api.com/images/store/product-21.jpeg",
       "colors": [
         "#0000ff",
@@ -289,7 +289,7 @@
     {
       "id": "rectfNsySwAJeWDN2",
       "name": "wooden table",
-      "price": 234999,
+      "price": 240,
       "image": "https://www.course-api.com/images/store/product-22.jpeg",
       "featured": true,
       "colors": [

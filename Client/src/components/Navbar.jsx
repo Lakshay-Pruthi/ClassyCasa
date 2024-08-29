@@ -17,17 +17,17 @@ function Navbar() {
                 </div>
                 </Link>
                 <ul id="navCatagory">
-                    <NavLink to={'Category/Office'}><li>Office</li></NavLink>
-                    <NavLink to={'Category/Living Room'}><li>Living Room</li></NavLink>
-                    <NavLink to={'Category/Kitchen'}><li>Kitchen</li></NavLink>
-                    <NavLink to={'Category/Bedroom'}><li>Bedroom</li></NavLink>
-                    <NavLink to={'Category/Kids'}><li>Kids</li></NavLink>
-                    <NavLink to={'Category/Dining'}><li>Dining</li></NavLink>
+                    <NavLink to={'category/Office'}><li>Office</li></NavLink>
+                    <NavLink to={'category/Living Room'}><li>Living Room</li></NavLink>
+                    <NavLink to={'category/Kitchen'}><li>Kitchen</li></NavLink>
+                    <NavLink to={'category/Bedroom'}><li>Bedroom</li></NavLink>
+                    <NavLink to={'category/Kids'}><li>Kids</li></NavLink>
+                    <NavLink to={'category/Dining'}><li>Dining</li></NavLink>
                 </ul>
                 <div id='otherOptions'>
                     <Link to='About'><img src={About} alt="" /></Link>
                     <Link to='UserOrders'><img src={truck} alt="" /></Link>
-                    <Link to={loggedIn ? 'User' : 'login'}><img src={user} alt="" /></Link>
+                    <Link to={loggedIn ? 'user' : 'login'}><img src={user} alt="" /></Link>
                 </div>
             </nav>
         </>

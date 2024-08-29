@@ -12,7 +12,6 @@ function ForgotPassword() {
     const [email, setEmail] = useState();
     const [OTP, setOTP] = useState()
     const [OTPSent, setOTPSent] = useState(false);
-    const [sessionId, setSessionId] = useState();
 
     async function sendOTP() {
         try {
@@ -27,7 +26,6 @@ function ForgotPassword() {
             });
             if (res.ok) {
                 const data = await res.json();
-                setSessionId(data.id);
                 toast.success(data.message, {
                     autoClose: 750,
                     position: toast.POSITION.BOTTOM_RIGHT,
@@ -128,7 +126,7 @@ function ForgotPassword() {
                         <button id="registerBtn" type="button" onClick={sendOTP}>Send OTP</button>
                     }
                     <div id="loginFormLinks">
-                        <Link to='/Signup'>No Account | Signup</Link>
+                        <Link to='/signup'>No Account | Signup</Link>
                     </div>
                 </form>
                 <ToastContainer />

@@ -1,23 +1,132 @@
-#buyNowForm {
+#address-form {
+    font-family: var(--font-primary);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     transition: 1s ease;
-    width: 20%;
+    padding: 15px;
 }
 
-
-#buyNowForm div {
+.minimized-form {
     display: flex;
-    width: 500px;
+    justify-content: space-between;
 }
 
-#buyNowForm #address {
+#rental-time-selector {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#address-form #address {
+    padding: 5px 0px;
     display: flex;
     flex-direction: column;
-    width: 300px;
 }
 
 #address input {
     height: 25px;
+}
+
+
+
+.address-form-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.checkout-container-outer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-container {
+    margin-top: 10px;
+    width: 50%;
+}
+
+.checkout-heading-container {
+    font-family: var(--font-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: aliceblue;
+}
+
+#checkout-image {
+    width: 75px;
+    height: 75px;
+}
+
+.checkout-container p {
+
+    font-size: x-large;
+}
+
+.order-summary-container {
+    width: 30%;
+    margin: 25px;
+
+}
+
+.order-summary {
+    padding: 20px;
+    min-height: 170px;
+    max-height: 170px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aliceblue;
+}
+
+.coupon-code {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.coupon-form {
+    border: 2px solid gray;
+    border-radius: 4px;
+}
+
+.coupon-code input {
+    height: 30px;
+    padding: 5px;
+    width: 75%;
+    box-sizing: border-box;
+    border: none;
+}
+
+.coupon-code input::placeholder {
+    font-style: italic;
+}
+
+.coupon-form button {
+    height: 30px;
+    width: 25%;
+    background-color: aliceblue;
+    border: none;
+    border-left: 1px solid black;
+}
+
+.coupon-form button:hover {
+    opacity: 0.7;
+    transition: none;
+    transform: none;
+}
+
+input:focus {
+    outline: none;
 }

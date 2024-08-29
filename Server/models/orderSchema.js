@@ -1,6 +1,6 @@
 class Order {
   constructor(orderData) {
-    const { id, rentalTime, address, status } = orderData;
+    const { id, price, rentalTime, address, status } = orderData;
     const date = new Date();
     this.id = id;
     this.rentalTime = rentalTime;
@@ -11,6 +11,7 @@ class Order {
     this.expectedDelivery = `${
       date.getDate() + 3
     } - ${date.getMonth()} - ${date.getFullYear()}`;
+    this.total = ((price / 1000) * rentalTime).toPrecision(5);
   }
 }
 

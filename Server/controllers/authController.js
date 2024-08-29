@@ -125,7 +125,7 @@ export const signUpController = async (req, res) => {
     // attachments : file attachment
   };
 
-  sendMail(info);
+  // sendMail(info);
 
   const token = await user.generateAuthToken();
   console.log(token);

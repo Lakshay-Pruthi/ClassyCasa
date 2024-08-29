@@ -1,7 +1,7 @@
 function Error404() {
     return (
         <>
-            <h1>This page doesn't exists.</h1>
+            <h1>This page doesn't exist.</h1>
         </>
     )
 }
