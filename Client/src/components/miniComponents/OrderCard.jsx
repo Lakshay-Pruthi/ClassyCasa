@@ -4,7 +4,7 @@ import { MainContext } from '../../Pages/Main';
 
 function OrderCard(props) {
     const { furnitureData } = useContext(MainContext);
-    const { id, rentalTime, address, createdAt, expectedDelivery } = props;
+    const { id, rentalTime, address, createdAt, expectedDelivery, total } = props;
     const { name, image, price } = furnitureData[id];
     return (
         <>
@@ -23,7 +23,7 @@ function OrderCard(props) {
                         <p>tenure : {rentalTime} M</p>
                         <p>{address}</p>
                         <p>price : ${price / 1000} / M</p>
-                        <p>total : ${(price / 1000 * rentalTime).toPrecision(5)}</p>
+                        <p>total : ${total}</p>
                     </div>
                 </div>
             </Link >

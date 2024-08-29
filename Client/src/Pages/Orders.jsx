@@ -10,8 +10,8 @@ function Orders(props) {
             const length = orderData.length;
             for (let i = 0; i < length; i++) {
                 setOrderedItems(orderData.map((e) => {
-                    const { id, rentalTime, address, createdAt, expectedDelivery } = e;
-                    return <Link to={`/product/${id}`}><OrderCard id={id} rentalTime={rentalTime} address={address} createdAt={createdAt} expectedDelivery={expectedDelivery} /></Link>
+                    const { id, rentalTime, address, createdAt, expectedDelivery, total } = e;
+                    return <Link to={`/product/${id}`}><OrderCard id={id} rentalTime={rentalTime} address={address} createdAt={createdAt} expectedDelivery={expectedDelivery} total={total} /></Link>
                 }))
             }
         }

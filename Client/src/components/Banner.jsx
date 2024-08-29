@@ -9,7 +9,7 @@ function Banner(props) {
                     <img className='BannerImage' src={Image} alt="" />
                     <div>
                         <p>Explore our beutifull range of {Title} </p>
-                        <Link to={`/Category/${Title}`}>   <button>Explore  <img className='bannerArrow' src={arrow} alt="" /></button></Link>
+                        <Link to={`/category/${Title}`}>   <button>Explore  <img className='bannerArrow' src={arrow} alt="" /></button></Link>
                     </div>
                 </div>
             </div>

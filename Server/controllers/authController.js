@@ -7,6 +7,8 @@ import rootDir from "../utils/path.js";
 import { validationResult } from "express-validator";
 
 export const authenticateController = async (req, res) => {
+  console.log("Request recieved!");
+
   try {
     const token = req.cookies.jwt;
     if (token) {
@@ -125,7 +127,7 @@ export const signUpController = async (req, res) => {
     // attachments : file attachment
   };
 
-  // sendMail(info);
+  sendMail(info);
 
   const token = await user.generateAuthToken();
   console.log(token);

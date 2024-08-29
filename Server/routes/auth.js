@@ -10,10 +10,7 @@ import {
 import express from "express";
 const router = express.Router();
 
-import { check, body } from "express-validator";
-
 router.get("/api/authenticate", authenticateController);
-
 router.post("/api/signup", signUpController);
 router.post("/api/login", logInController);
 router.put("/api/updateUserDetails", updateUserDetailController);
