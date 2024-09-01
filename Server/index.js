@@ -40,6 +40,15 @@ app.use(orderRoutes);
 
 app.use(express.static(path.join(rootDir, "..", "..", "Client", "dist")));
 
+app.use("/api/wakeServerOne", (req, res) => {
+  setTimeout(() => {
+    const res = fetch("http://localhost:3000/api/wakeServerTwo");
+  }, 300000);
+  console.log("I am also working");
+
+  res.status(200).json({ message: "Hi!!" });
+});
+
 app.use("/", (req, res) => {
   res.sendFile(path.join(rootDir, "..", "..", "Client", "dist", "index.html"));
 });
