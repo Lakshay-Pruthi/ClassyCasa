@@ -41,14 +41,14 @@ app.use(orderRoutes);
 app.use(express.static(path.join(rootDir, "..", "..", "Client", "dist")));
 
 app.use("/api/wakeServerOne", (req, res) => {
-  console.log("Request recueved from server two");
+  console.log("Request recieved from ARS");
 
-  setTimeout(() => {
-    const res = fetch(
-      "https://classycasarequestsender.onrender.com/api/wakeServerTwo"
-    );
-  }, 30000);
-  console.log("I am also working");
+  // setTimeout(() => {
+  //   const res = fetch(
+  //     "https://classycasarequestsender.onrender.com/api/wakeServerTwo"
+  //   );
+  // }, 30000);
+  console.log("I am awake!!");
 
   res.status(200).json({ message: "Hi!!" });
 });
