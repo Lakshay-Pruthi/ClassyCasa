@@ -44,8 +44,10 @@ app.use("/api/wakeServerOne", (req, res) => {
   console.log("Request recueved from server two");
 
   setTimeout(() => {
-    const res = fetch("https://classycasarequestsender/api/wakeServerTwo");
-  }, 300000);
+    const res = fetch(
+      "https://classycasarequestsender.onrender.com/api/wakeServerTwo"
+    );
+  }, 30000);
   console.log("I am also working");
 
   res.status(200).json({ message: "Hi!!" });
