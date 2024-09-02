@@ -41,8 +41,10 @@ app.use(orderRoutes);
 app.use(express.static(path.join(rootDir, "..", "..", "Client", "dist")));
 
 app.use("/api/wakeServerOne", (req, res) => {
+  console.log("Request recueved from server two");
+
   setTimeout(() => {
-    const res = fetch("http://localhost:3000/api/wakeServerTwo");
+    const res = fetch("https://classycasarequestsender/api/wakeServerTwo");
   }, 300000);
   console.log("I am also working");
 
