@@ -1,4 +1,3 @@
-## This Project is deployed on Render so, it may take some time to load.
 ## Project Snapshots
 ![image](https://github.com/user-attachments/assets/8ff5ef3a-fa13-463f-af32-aad074774b33)
 ![image](https://github.com/user-attachments/assets/95913fce-9649-4fce-8621-72887fa8187b)
